@@ -77,6 +77,19 @@
     line-height: normal;
 }
 
+.name-title h5{
+    color: #000;
+    font-family:'gilroy-bold';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 5px;
+}
+.name-title img {
+    width: 120px;
+}
+
 .name-title p{
     color: #000;
     font-family:'gilroy-Regular';

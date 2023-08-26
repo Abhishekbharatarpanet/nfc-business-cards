@@ -29,6 +29,6 @@ document.getElementById("contactButton").addEventListener("click", function() {
     // Creating a downloadable link
     const link = document.createElement("a");
     link.href = URL.createObjectURL(blob);
-    link.download = "contact.vcf";
+    link.download = `${email}.vcf`;
     link.click();
 });
