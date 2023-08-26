@@ -13,6 +13,10 @@
     src: url(../fonts/gilroy/Gilroy-Bold.ttf);
 }
 @font-face {
+    font-family:'gilroy-Regular';
+    src: url(../fonts/gilroy/Gilroy-Regular.ttf);
+}
+@font-face {
     font-family:'visby-bold';
     src: url(../fonts/visby/visbycf-bold.otf);
 }
@@ -75,7 +79,7 @@
 
 .name-title p{
     color: #000;
-    font-family:'gilroy-light';
+    font-family:'gilroy-Regular';
     font-size: 14px;
     font-style: normal;
     font-weight: 300;
@@ -157,8 +161,9 @@
 
 .about-sec p{
     color: #000;
-    font-family:'gilroy-light';
-    font-size: 11.5px;
+    /* font-family:'gilroy-light'; */
+    font-family:'gilroy-Regular';
+    font-size: 13px;
     font-style: normal;
     font-weight: 300;
     line-height: 15px;
@@ -180,6 +185,12 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    color: #000;
+    font-family:'visby-bold';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
 }
 .table-title{
     color: #000 !important;
