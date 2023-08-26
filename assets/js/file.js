@@ -3,27 +3,30 @@ document.getElementById("contactButton").addEventListener("click", function() {
     const name =document.getElementById("con-name").innerHTML ;
     const email = document.getElementById("con-emil").innerHTML;
     const phone = document.getElementById("contact_number").innerHTML;
-    const website = document.getElementById("con-url").href;
+    const website = document.getElementById("con-url").innerHTML;
     const address = document.getElementById("con_add").innerText;
-    const designation = document.getElementById("con-designation").innerHTML ;;
+    const designation = document.getElementById("con-designation").innerHTML ;
 
     console.log(name+ ' '+ email + ' '+ phone + ' '+ website + ' '+ address + ' '+ designation)
     
-    // Create vCard data
+    // Creating vCard data
     const vCardData = `BEGIN:VCARD
-VERSION:3.0
-FN:${name}
-ORG:${designation}
-TEL:${phone}
-EMAIL:${email}
-URL:${website}
-ADR:${address}
-END:VCARD`;
+    VERSION:3.0
+    FN:${name}
+    ORG:${designation}
+    TEL:${phone}
+    EMAIL:${email}
+    URL:${website}
+    ADR:${address}
+    END:VCARD`;
+    
+    const myJSON = JSON.stringify(vCardData);
+    console.log(vCardData)
 
-    // Create a Blob containing the vCard data
-    const blob = new Blob([vCardData], { type: "text/vcard" });
+    // Creating a Blob containing the vCard data
+    const blob = new Blob([myJSON], { type: "text/vcard" });
 
-    // Create a downloadable link
+    // Creating a downloadable link
     const link = document.createElement("a");
     link.href = URL.createObjectURL(blob);
     link.download = "contact.vcf";
